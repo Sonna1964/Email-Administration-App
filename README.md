@@ -18,4 +18,4 @@ This project is an **Email Application** designed for an IT Support Administrato
 
 1. Clone the repository to your local machine:
    ```bash
-   git clone https://github.com/YourGitHubUsername/EmailApplication.git
+   git clone https://github.com/Sonna1964/Email-Administration-App.git
