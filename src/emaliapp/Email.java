@@ -25,7 +25,11 @@ class Email {
 
         //Call asking for the department - return the department
         this.department = setDepartment();
-        System.out.println("Department is : " + this.department);
+        if (Objects.equals(department, "")) {
+            System.out.println("Department is : none");
+        }else{
+            System.out.println("Department is : " + this.department);
+        }
 
         //Call a method that returns a random password
         String randomPassword = generateRandomPassword(passwordLength);
@@ -45,7 +49,7 @@ class Email {
     //Ask for the department
 
     private String setDepartment() {
-        System.out.print("Enter the department\n0 for Sales\n1 for Development\n2 for Accounting\n3 for None\n\nEnter the department code : ");
+        System.out.print("Enter the department\n0 for Development\n1 for Sales\n2 for Accounting\n3 for None\n\nEnter the department code : ");
         Scanner in = new Scanner(System.in);
         int depChoice = 0;
         boolean validInput = false;
