@@ -1,6 +1,7 @@
 package emaliapp;
 
 import java.security.SecureRandom;
+import java.util.Objects;
 import java.util.Scanner;
 
 class Email {
@@ -31,8 +32,8 @@ class Email {
         System.out.println("Generated Password: " + randomPassword + "\n" + "\n");
 
         //Combine to generate Email
-        if (department == null) {
-            email = firstName.toLowerCase() + "." + secondName.toLowerCase() + "@" + department + "" + companySuffix;
+        if (Objects.equals(department, "")) {
+            email = firstName.toLowerCase() + "." + secondName.toLowerCase() + "@" + department + companySuffix;
             System.out.println("*****WELCOME TO VIRTUSA*****\n>>YOUR EMAIL ADDRESS IS : " + email + "\n" + "\n");
         }else {
             email = firstName.toLowerCase() + "." + secondName.toLowerCase() + "@" + department + "." + companySuffix;
